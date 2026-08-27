@@ -1,0 +1,38 @@
+{
+  "name": "genpark-serverless-coldstart-gpu-microcontainer-autoscaler-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Serverless GPU micro-container autoscaler managing sub-second cold starts, dynamic vRAM allocation, and traffic routing.",
+  "author": "genpark",
+  "category": "gpu-infrastructure",
+  "tags": [
+    "yc-2026",
+    "serverless-gpu",
+    "coldstart-optimization",
+    "microcontainers",
+    "vram-autoscaling"
+  ],
+  "inputs": {
+    "model_weight_hash": {
+      "type": "string"
+    },
+    "request_batch_size": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "routing_decision_id": {
+      "type": "string"
+    },
+    "target_gpu_cluster": {
+      "type": "string"
+    },
+    "cold_start_snapshot_restore_ms": {
+      "type": "integer"
+    },
+    "zero_idle_cost_achieved": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
